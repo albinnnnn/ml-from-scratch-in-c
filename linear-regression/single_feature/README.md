@@ -40,6 +40,7 @@ $$
 $$
 
 where:
+
 - $w$ is the slope (weight)
 - $b$ is the intercept (bias)
 
@@ -95,6 +96,7 @@ J(w, b) = \frac{1}{m} \sum_{i=1}^{m} \left( w \cdot x_i + b - y_i \right)^2
 $$
 
 where:
+
 - $m$ is the number of training samples
 
 To minimize this loss, gradient descent is applied by computing the partial
@@ -150,27 +152,27 @@ $$
 
 Distribution of SAT and GPA values to inspect the spread of the data.
 
-![Data distribution](plots/data_distribution.png)
+![Data distribution](linear-regression/single_featureplots/plots/data_distribution.png)
 
 ### Linear regression fit
 
 Scatter plot of SAT vs GPA with the learned regression line overlaid.
 
-![Regression fit](plots/regression_fit.png)
+![Regression fit](linear-regression/single_featureplots/plots/regression_fit.png)
 
 ### Loss curve
 
 Mean Squared Error plotted over training iterations, showing gradient descent
 convergence.
 
-![Loss curve](plots/loss_curve.png)
+![Loss curve](linear-regression/single_featureplots/plots/loss_curve.png)
 
 ### Comparison with scikit-learn
 
 Predictions from the from-scratch C implementation compared with a
 single-feature linear regression model from scikit-learn.
 
-![Comparison with scikit-learn](plots/comparison_with_scikit-learn.png)
+![Comparison with scikit-learn](linear-regression/single_featureplots/plots/comparison_with_scikit-learn.png)
 
 ---
 

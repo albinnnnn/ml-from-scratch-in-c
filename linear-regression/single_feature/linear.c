@@ -5,6 +5,7 @@
 
 #define MAX_SAMPLES 1000
 #define LINE_LEN 256
+#define EPOCHS 2000
 
 double data[MAX_SAMPLES][2];      // raw x, y
 double data_norm[MAX_SAMPLES][2]; // normalized x (train), raw y
@@ -92,7 +93,7 @@ int main(void)
 
     printf("Loaded %zu samples.\n", sample_count);
 
-    /* split without shuffle */
+    /* split */
     size_t train_count = (size_t)(sample_count * 0.75);
     size_t test_count = sample_count - train_count;
     printf("Training samples: %zu | Test samples: %zu\n", train_count, test_count);
@@ -107,7 +108,7 @@ int main(void)
     double last_loss = 1e30;
 
     /* train */
-    for (size_t step = 0; step < 2000; step++) {
+    for (size_t step = 0; step < EPOCHS; step++) {
         double dw, db, loss;
         gradient_step(w, b, train_count, &dw, &db, &loss);
 
