@@ -12,6 +12,7 @@ Extends single-feature regression to multiple dimensions, focusing on:
 **Dataset:** [Student performance data](https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression) with multiple attributes predicting performance scores.
 
 **Model:**
+
 $$
 \text{Score} = w_1 \cdot x_1 + w_2 \cdot x_2 + \cdots + w_n \cdot x_n + b
 $$
@@ -27,11 +28,13 @@ $$
 ## Math
 
 **MSE Loss:**
+
 $$
 J(w, b) = \frac{1}{m} \sum_{i=1}^{m} \left( \sum_{j=1}^{n} w_j \cdot x_{i,j} + b - y_i \right)^2
 $$
 
 **Gradients:**
+
 $$
 \frac{\partial J}{\partial w_j} = \frac{2}{m} \sum_{i=1}^{m} \left( \sum_{k=1}^{n} w_k \cdot x_{i,k} + b - y_i \right) x_{i,j}
 $$
@@ -41,8 +44,13 @@ $$
 $$
 
 **Updates:**
+
 $$
-w_j \leftarrow w_j - \alpha \cdot \frac{\partial J}{\partial w_j}, \quad b \leftarrow b - \alpha \cdot \frac{\partial J}{\partial b}
+w_j \leftarrow w_j - \alpha \cdot \frac{\partial J}{\partial w_j}
+$$
+
+$$
+b \leftarrow b - \alpha \cdot \frac{\partial J}{\partial b}
 $$
 
 ## Results
